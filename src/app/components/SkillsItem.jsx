@@ -1,9 +1,12 @@
 import React from 'react';
 import Image from 'next/image';
 import Html from "../../../public/html.svg";
+
+
+
 const skillToSvg = {
     "HTML": <svg xmlns="http://www.w3.org/2000/svg" width="26" height="35" viewBox="0 0 26 35" fill="none">
-        <path class="svg-path" d="M0 0.1875L2.36302 27.2441L12.9661 30.8125L23.637 27.2441L26 0.1875H0ZM20.8677 8.93066H8.42292L8.70052 12.3076H20.5901L19.6693 22.4521L13.0406 24.2979V24.3184H12.9661L6.28333 22.4521L5.87708 17.2705H9.10677L9.34375 19.875L12.9661 20.8662L16.6021 19.875L17.0083 15.623H5.70781L4.84115 5.66992H21.1656L20.8677 " fill="white" />
+        <path class="svg-path" d="M0 0.1875L2.36302 27.2441L12.9661 30.8125L23.637 27.2441L26 0.1875H0ZM20.8677 8.93066H8.42292L8.70052 12.3076H20.5901L19.6693 22.4521L13.0406 24.2979V24.3184H12.9661L6.28333 22.4521L5.87708 17.2705H9.10677L9.34375 19.875L12.9661 20.8662L16.6021 19.875L17.0083 15.623H5.70781L4.84115 5.66992H21.1656L20.8677 " fill="white dark:#000000" />
     </svg>,
     "CSS": <svg xmlns="http://www.w3.org/2000/svg" width="26" height="31" viewBox="0 0 26 31" fill="none">
         <path class="svg-path" d="M0 0L2.36302 27.3879L13 31L23.637 27.3879L26 0H0ZM21.1995 5.53571L20.8745 8.80871L13.0677 12.2201L13.0474 12.227H20.5969L19.7302 22.3712L13.0813 24.3571L6.39167 22.3366L5.95833 17.223H9.26927L9.48594 19.8732L13.0474 20.7935L16.751 19.7279L17.0016 15.4654L5.74167 15.4308V15.4239L5.72813 15.4308L5.48438 12.227L13.0745 8.99554L13.5146 8.80871H5.19323L4.80052 5.53571H21.1995Z" fill="#F1F1F1" />
@@ -134,13 +137,13 @@ const SkillsItem = ({ skillName, percentage }) => {
 
     return (
         <div className="flex flex-col items-center justify-center text-purpura font-semibold pb-4">
-            <div className="svg-container group flex items-center justify-center degradado h-[70px] w-[70px] rounded-[10px] relative">
+            <div className="svg-container group flex items-center justify-center degradado h-[70px] w-[70px] rounded-[10px] relative dark:bg-degradado-black dark:border-borde">
                 {skillSvg}
                 <div className="hover-cube text-sm absolute top-[-22px] right-[-10px] bg-purpura w-[30px] h-[30px] rounded-[6px] p-2 flex items-center justify-center text-blanco opacity-0 group-hover:opacity-100">
                     {percentage}<span className="percent">%</span>
                 </div>
             </div>
-            {skillName}
+            {skillName} 
         </div>
     );
 };

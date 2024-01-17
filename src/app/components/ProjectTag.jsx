@@ -3,7 +3,7 @@ import React from "react";
 const ProjectTag = ({ name, onClick, isSelected }) => {
   const buttonStyles = isSelected
     ? "active-linke "
-    : " text-negro";
+    : " text-negro dark:text-blanco";
   return (
     <button
       className={`${buttonStyles} `}

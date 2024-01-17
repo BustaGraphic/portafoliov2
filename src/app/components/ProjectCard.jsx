@@ -15,11 +15,12 @@ const ProjectCard = ({ imgUrl, title, aplications, previewUrl, boxClickUrl, imag
     window.open("https://www.google.com", '_blank');
   };
   return (
-    <div className="degradado p-5 rounded-[20px]"> { }
-      <div className=" cursor-pointer" onClick={handleBoxClick}>
+    <div className="degradado p-5 rounded-[20px] dark:border-borde dark:bg-degradado-black "> { }
+      <div className=" cursor-pointer grid grid-cols-2  gap-5 " onClick={handleBoxClick}>
+      
         <div
-          className="h-52 md:h-72 rounded-[16px] relative group"
-          style={{ background: `url(${imgUrl})`, backgroundSize: "cover" }}
+          className="h-[190px]  rounded-[16px] relative w-[285px] group"
+          style={{ background: "#000000", backgroundSize: "cover" }}
           onClick={(e) => {
             e.stopPropagation();
             handleImageClick();
@@ -31,8 +32,9 @@ const ProjectCard = ({ imgUrl, title, aplications, previewUrl, boxClickUrl, imag
             </div>
           </Link>
         </div>
-        <div className="text-negro rounded-b-xl mt-3 pt-6 pb-2 px-4">
-          <h5 className="text-xl font-semibold mb-2 ">{title}</h5>
+        <h5 className="text-xl font-semibold mb-2 ">{title}</h5>
+        <div className="text-negro rounded-b-xl mt-3 pt-6 pb-2 px-4 dark:text-blanco">
+          
           <div className="grid grid-cols-12 gap-[2px]">
             {aplications.map((appIcon, index) => (
               <div key={index} className="w-[20px]">

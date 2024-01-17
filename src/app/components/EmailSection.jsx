@@ -54,7 +54,7 @@ const EmailSection = () => {
 
   return (
     <section id="contact" className="lg:pt-[210px] pt-20 fuente">
-      <h2 className="text-center text-4xl font-semibold text-negro mt-4 mb-8 md:mb-12 sm:pb-[40px] fuente">
+      <h2 className="text-center text-4xl font-semibold text-negro mt-4 mb-8 md:mb-12 sm:pb-[40px] fuente dark:text-blanco">
         Contact <span className="text-purpura font-bold">Me</span>
       </h2>
 
@@ -78,7 +78,7 @@ const EmailSection = () => {
                   type="email"
                   id="email"
                   required
-                  className="rounded-[10px] degradado block w-full p-2.5 text-negro"
+                  className="rounded-[10px] degradado block w-full p-2.5 text-negro dark:border-borde dark:bg-degradado-black dark:text-blanco"
                   placeholder="example@email.com"
                 />
               </div>
@@ -94,7 +94,7 @@ const EmailSection = () => {
                   type="text"
                   id="subject"
                   required
-                  className="rounded-[10px] degradado block w-full p-2.5 text-negro"
+                  className="rounded-[10px] degradado block w-full p-2.5 text-negro dark:border-borde dark:bg-degradado-black dark:text-blanco"
                   placeholder="Your subject"
                 />
               </div>
@@ -108,13 +108,13 @@ const EmailSection = () => {
                 <textarea
                   name="message"
                   id="message"
-                  className="rounded-[10px] degradado block w-full p-2.5 text-negro"
+                  className="rounded-[10px] degradado block w-full p-2.5 text-negro dark:border-borde dark:bg-degradado-black dark:text-blanco"
                   placeholder="Message..."
                 />
               </div>
               <button
                 type="submit"
-                className="py-3.5 px-50 rounded-[10px] degradadomail text-purpura font-bold "
+                className="py-3.5 px-50 rounded-[10px] degradadomail text-purpura font-bold  dark:bg-degradado-black hover:bg-purpura hover:text-blanco hover:border-blanco dark:hover:border-negro dark:hover:text-negro"
               >
                 Send Message
               </button>
@@ -124,8 +124,8 @@ const EmailSection = () => {
         </div>
         
         <div className="z-10">
-          <h5 className="text-xl font-bold text-negro my-2">Get in <span className="text-purpura">touch</span> </h5>
-          <p className="text-negro mb-4 max-w-md">
+          <h5 className="text-xl font-bold text-negro my-2 dark:text-blanco">Get in <span className="text-purpura">touch</span> </h5>
+          <p className="text-negro mb-4 max-w-md dark:text-blanco">
           I am open to new job opportunities and my email is always at your disposal. Feel free to contact me, either to ask a question or just to say hello. I will do my best to get back to you as soon as possible.
           </p>
          

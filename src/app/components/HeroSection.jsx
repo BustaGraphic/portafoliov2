@@ -13,6 +13,7 @@ import LinkedInIconC from "../../../public/linkedincolor.png";
 import BehanceIconC from "../../../public/behancecolor.png";
 import BustaLogo from "../../../public/bustalogo.png";
 import TextoBusta from "../../../public/textobusta.png";
+import Cv from "../../../public/bustalogo.png";
 
 const HeroSection = () => {
   const [isGithubHovered, setIsGithubHovered] = useState(false);
@@ -20,13 +21,13 @@ const HeroSection = () => {
   const [isLinkedInHovered, setIsLinkedInHovered] = useState(false);
 
   return (
-    <motion.section id="home" className="lg:pt-[200px] fuente" initial={{ opacity: 0, scale: 0.5 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5 }}>
+    <motion.section id="home" className="lg:pt-[200px]  " initial={{ opacity: 0, scale: 0.5 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5 }}>
       <div className="grid grid-cols-1 sm:grid-cols-12 lg:mt-[-70px] " >
         <motion.div className="col-span-8 text-center sm:text-left my-auto">
-        <span className="text-negro text-6xl font-bold fuente">
+        <span className="text-negro text-6xl font-bold dark:text-blanco">
               Hello, I&apos;m 
             </span>
-          <h1 className="text-purpura mb-4 sm:text-8xl text-8xl lg:text-8xl lg:leading-normal font-extrabold fuente ">
+          <h1 className="text-purpura mb-4 sm:text-8xl text-8xl lg:text-8xl lg:leading-normal font-extrabold ">
             
             
             <TypeAnimation
@@ -48,15 +49,17 @@ const HeroSection = () => {
 
           <div className="flex flex-col sm:flex-row justify-center sm:justify-start items-center space-y-2 sm:space-y-0">
 
-            <Link href="/#contact" className="px-10 py-2 inline-block rounded-full text-black font-semibold  bg-purpura text-center">
-              Hire Me,
+            <Link href="/#contact" className="px-10 py-2 inline-block rounded-full text-black font-semibold  bg-purpura text-center dark:text-[#000000]">
+              Hire Me
 
             </Link>
-
-            <div className="flex border-2 border-purpura rounded-full justify-center sm:justify-start items-center w-full sm:w-auto px-5 py-2  bg-transparent text-purpura font-semibold ml-5 ">
+              <a href={Cv} download="logojeubusta.png">
+              <button className="flex border-2 border-purpura rounded-full justify-center sm:justify-start items-center w-full sm:w-auto px-5 py-2  bg-transparent text-purpura font-semibold ml-5 dark:bg-degradado-black ">
               
               CV
-            </div>
+            </button>
+              </a>
+            
 
           </div>
         </motion.div>
@@ -77,7 +80,7 @@ const HeroSection = () => {
               }}
               onMouseEnter={() => setIsGithubHovered(true)}
               onMouseLeave={() => setIsGithubHovered(false)}
-              className="absolute border-[1px] rounded-[10px] degradado top-[270px] left-[25px] "
+              className="absolute border-[1px] rounded-[10px] degradado top-[270px] left-[25px] dark:border-borde dark:bg-degradado-black "
             >
               <Image
                 src={isGithubHovered ? GithubIconC : GithubIcon}
@@ -92,7 +95,7 @@ const HeroSection = () => {
               }}
               onMouseEnter={() => setIsBehanceHovered(true)}
               onMouseLeave={() => setIsBehanceHovered(false)}
-              className="absolute border-[1px] rounded-[10px] degradado bottom-[15px] right-[160px]"
+              className="absolute border-[1px] rounded-[10px] degradado bottom-[15px] right-[160px] dark:border-borde dark:bg-degradado-black"
             >
               <Image
                 src={isBehanceHovered ? BehanceIconC : BehanceIcon}
@@ -107,7 +110,7 @@ const HeroSection = () => {
               }}
               onMouseEnter={() => setIsLinkedInHovered(true)}
               onMouseLeave={() => setIsLinkedInHovered(false)}
-              className="absolute  border-[1px] rounded-[10px] degradado bottom-[220px] right-[15px]"
+              className="absolute  border-[1px] rounded-[10px] degradado bottom-[220px] right-[15px] dark:border-borde dark:bg-degradado-black"
             >
               <Image
                 src={isLinkedInHovered ? LinkedInIconC : LinkedInIcon}

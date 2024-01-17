@@ -83,11 +83,11 @@ const ProjectsSection = () => {
 
   return (
     <section id="projects" className="fuente">
-      <h2 className="text-center text-negro text-4xl font-semibold mt-4 mb-[-200px] md:my-[-150px] pb-[210px] pt-[210px]">
+      <h2 className="text-center text-negro text-4xl font-semibold mt-4 mb-[-200px] md:my-[-150px] pb-[210px] pt-[210px] dark:text-blanco">
         My <span className="text-purpura font-bold">Projects</span>
       </h2>
       <div className="flex justify-center">
-      <div className="inline-flex flex-row degradado rounded-full justify-center items-center gap-10 my-6 h-[45px] px-10">
+      <div className="inline-flex flex-row degradado rounded-full justify-center items-center gap-10 my-6 h-[45px] px-10 dark:border-borde dark:bg-degradado-black">
         <ProjectTag
           onClick={handleTagChange}
           name="All Works"

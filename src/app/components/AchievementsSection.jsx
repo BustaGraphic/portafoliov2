@@ -32,7 +32,7 @@ const AchievementsSection = () => {
   return (
     <div className="py-20 px-4 xl:gap-16  xl:px-16 fuente">
     
-      <div className="sm:border-transparent sm:border rounded-[20px] py-4 px-20 flex flex-col sm:flex-row items-center justify-between degradado">
+      <div className="sm:border-transparent sm:border rounded-[20px] py-4 px-20 flex flex-col sm:flex-row items-center justify-between dark:border-borde dark:bg-degradado-black degradado">
       
         
         {achievementsList.map((achievement, index) => {
@@ -47,7 +47,7 @@ const AchievementsSection = () => {
                   includeComma
                   animateToNumber={parseInt(achievement.value)}
                   locale="en-US"
-                  className=" text-negro text-4xl font-bold font-montserrat"
+                  className=" text-negro text-4xl font-bold font-montserrat dark:text-blanco "
                   configs={(_, index) => {
                     return {
                       mass: 1,

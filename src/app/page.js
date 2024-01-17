@@ -8,14 +8,14 @@ import AchievementsSection from "./components/AchievementsSection";
 import SkillsSection from "./components/SkillsSection"
 
 
+
 export default function Home() {
-  const backgroundStyle = {
-    background: '#CADAEA',
-    minHeight: '100vh',  
-  };
+  
 
   return (
-    <main style={backgroundStyle}>
+    <main className="" >
+      
+      <div className=" bg-fondocolor fuente dark:bg-[#000000] ">
       <Navbar />
       <div className="container mx-auto px-12 py-4">
         <HeroSection />
@@ -27,6 +27,7 @@ export default function Home() {
         <EmailSection />
       </div>
       {/* <Footer /> */}
+      </div>
     </main>
   );
 }
