@@ -83,7 +83,7 @@ const ProjectsSection = () => {
 
   return (
     <section id="projects" className="fuente">
-      <h2 className="text-center text-negro text-4xl font-semibold mt-4 mb-[-200px] md:my-[-150px] pb-[210px] pt-[210px] dark:text-blanco">
+      <h2 className="text-center text-negro text-4xl font-semibold mt-4 mb-[-200px] md:my-[-150px] pb-[210px] pt-[210px] dark:text-blanko">
         My <span className="text-purpura font-bold">Projects</span>
       </h2>
       <div className="flex justify-center">
@@ -110,7 +110,7 @@ const ProjectsSection = () => {
         />
       </div>
       </div>
-      <ul ref={ref} className="grid md:grid-cols-1 gap-8 md:gap-12 lg:grid-cols-2">
+      <ul ref={ref} className="grid md:grid-cols-1 gap-8 md:gap-12 lg:grid-cols-3">
         {filteredProjects.map((project, index) => (
           <motion.li
             key={index}

@@ -24,7 +24,7 @@ const HeroSection = () => {
     <motion.section id="home" className="lg:pt-[200px]  " initial={{ opacity: 0, scale: 0.5 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5 }}>
       <div className="grid grid-cols-1 sm:grid-cols-12 lg:mt-[-70px] " >
         <motion.div className="col-span-8 text-center sm:text-left my-auto">
-        <span className="text-negro text-6xl font-bold dark:text-blanco">
+        <span className="text-negro text-6xl font-bold dark:text-blanko">
               Hello, I&apos;m 
             </span>
           <h1 className="text-purpura mb-4 sm:text-8xl text-8xl lg:text-8xl lg:leading-normal font-extrabold ">

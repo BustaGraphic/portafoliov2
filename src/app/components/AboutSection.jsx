@@ -23,7 +23,7 @@ const AboutSection = () => {
 
       </div>
       <div className="flex justify-center my-10">
-        <h2 className="text-4xl font-semibold text-negro mb-4 dark:text-blanco ">
+        <h2 className="text-4xl font-semibold text-negro mb-4 dark:text-blanko ">
           About <span className="text-purpura font-bold">Me</span>
         </h2>
       </div>

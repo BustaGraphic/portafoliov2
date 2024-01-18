@@ -95,7 +95,7 @@ const Navbar = () => {
     <nav className="w-full relative fuente">
 
       <div className="flex  items-center justify-center w-full">
-        <div className="!fixed rounded-full  border-[1]    top-10  w-[1042px] h-[65px] container pt-[9px] pb-[10px] flex-wrap   text-negro z-20 degradado dark:text-blanco dark:bg-degradado-black dark:border-[#3B3D41]">
+        <div className="!fixed rounded-full  border-[1]    top-10  w-[1042px] h-[65px] container pt-[9px] pb-[10px] flex-wrap   text-negro z-20 degradado dark:text-blanko dark:bg-degradado-black dark:border-[#3B3D41]">
           <div className={`menu  md:flex md:items-center md:justify-between ${navbarOpen ? 'block' : 'hidden'}`} id="navbar">
             <ul className="ml-20 flex  text-lg p-0 md:p-0  space-x-[91px] mt-0 items-center ">
               {navLinks.map((link, index) => (
@@ -111,8 +111,8 @@ const Navbar = () => {
 
                 <div className="flex items-center">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-[24px] w-[24px]" viewBox="0 0 24 24" fill="none">
-                    <path d="M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" stroke={`${theme === 'dark' ? '#F1f1f1' : '#4443D8'}`} stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" />
-                    <path d="M12 2V4 M12 20V22 M4.92999 4.92999L6.33999 6.33999 M17.66 17.66L19.07 19.07 M2 12H4 M20 12H22 M6.33999 17.66L4.92999 19.07 M19.07 4.92999L17.66 6.33999" stroke={`${theme === 'dark' ? '#F1f1f1' : '#4443D8'}`} stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" stroke={`${theme === 'dark' ? '#BBC7D6' : '#4443D8'}`} stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M12 2V4 M12 20V22 M4.92999 4.92999L6.33999 6.33999 M17.66 17.66L19.07 19.07 M2 12H4 M20 12H22 M6.33999 17.66L4.92999 19.07 M19.07 4.92999L17.66 6.33999" stroke={`${theme === 'dark' ? '#BBC7D6' : '#4443D8'}`} stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" />
                   </svg>
                 </div>
 
