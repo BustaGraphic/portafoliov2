@@ -4,9 +4,20 @@ import Link from "next/link";
 import { useRouter } from 'next/router';
 import Image from 'next/image';
 import Html from "../../../public/images/html.png"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faCss3Alt } from '@fortawesome/free-brands-svg-icons';
+import { faHtml5 } from '@fortawesome/free-brands-svg-icons';
+import { faReact } from '@fortawesome/free-brands-svg-icons';
+import { faAngular } from '@fortawesome/free-brands-svg-icons';
+import { faBootstrap } from '@fortawesome/free-brands-svg-icons';
+import { faJava } from '@fortawesome/free-brands-svg-icons';
+import { faJs } from '@fortawesome/free-brands-svg-icons';
+import { faPython } from '@fortawesome/free-brands-svg-icons';
+import { faNodeJs } from '@fortawesome/free-brands-svg-icons';
 
 
-const ProjectCard = ({ imgUrl, title, aplications, previewUrl, boxClickUrl, imageClickUrl, appIcons }) => {
+const ProjectCard = ({ imgUrl, title, aplications, previewUrl, boxClickUrl, imageClickUrl, fontAwesomeIcons })=> {
   const handleBoxClick = () => {
     window.open("https://www.x.com", '_blank');
   };
@@ -16,7 +27,7 @@ const ProjectCard = ({ imgUrl, title, aplications, previewUrl, boxClickUrl, imag
   };
   return (
     <div className=""> { }
-      <div className=" degradado p-5 rounded-[10px] dark:border-borde dark:bg-degradado-black hover:border-purpura cursor-pointer" onClick={handleBoxClick}>
+      <div className=" degradado p-5 rounded-[10px] dark:border-borde dark:bg-degradado-black cursor-pointer" onClick={handleBoxClick}>
         <div
           className="h-52 md:h-72 rounded-[16px] relative group"
           style={{ background: `url(${imgUrl})`, backgroundSize: "cover" }}
@@ -34,14 +45,13 @@ const ProjectCard = ({ imgUrl, title, aplications, previewUrl, boxClickUrl, imag
         <div className="text-negro rounded-b-xl mt-3 pt-6 pb-2 px-4 dark:text-blanko">
           <h5 className="text-xl font-semibold mb-2 ">{title}</h5>
           <div className="grid grid-cols-12 gap-[2px]">
-            {aplications.map((appIcon, index) => (
+            {aplications.map((iconName, index) => (
               <div key={index} className="w-[20px]">
-                <Image
-                  src={appIcon}
+                <FontAwesomeIcon
+                  icon={fontAwesomeIcons[iconName]}
                   alt="Application Icon"
                   width={20}
                   height={20}
-                  
                 />
               </div>
             ))}

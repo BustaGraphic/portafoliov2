@@ -5,15 +5,16 @@ import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import GithubIcon from "../../../public/github.png";
-import LinkedInIcon from "../../../public/linkedin.png";
-import BehanceIcon from "../../../public/behance.png";
-import GithubIconC from "../../../public/githubcolor.png";
-import LinkedInIconC from "../../../public/linkedincolor.png";
-import BehanceIconC from "../../../public/behancecolor.png";
+
 import BustaLogo from "../../../public/bustalogo.png";
 import TextoBusta from "../../../public/textobusta.png";
 import Cv from "../../../public/bustalogo.png";
+import { Download } from 'lucide-react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faBehance } from '@fortawesome/free-brands-svg-icons';
+import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
+
 
 const HeroSection = () => {
   const [isGithubHovered, setIsGithubHovered] = useState(false);
@@ -23,22 +24,24 @@ const HeroSection = () => {
   return (
     <motion.section id="home" className="lg:pt-[200px]  " initial={{ opacity: 0, scale: 0.5 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5 }}>
       <div className="grid grid-cols-1 sm:grid-cols-12 lg:mt-[-70px] " >
-        <motion.div className="col-span-8 text-center sm:text-left my-auto">
-        <span className="text-negro text-6xl font-bold dark:text-blanko">
-              Hello, I&apos;m 
-            </span>
+        <motion.div className="col-span-8 text-center sm:text-left my-auto mb-[100px]">
+          <span className="text-negro text-6xl font-bold dark:text-blanko">
+            Hello, I&apos;m
+            
+           
+          </span>
           <h1 className="text-purpura mb-4 sm:text-8xl text-8xl lg:text-8xl lg:leading-normal font-extrabold ">
-            
-            
+
+
             <TypeAnimation
               sequence={[
                 "Busta",
                 1000,
-                "Web ",
+                "Web Developer",
                 1000,
-                "Designer",
+                "Graphic Designer",
                 1000,
-                "UI/UX ",
+                "UI/UX Designer",
                 1000,
               ]}
               wrapper="span"
@@ -53,13 +56,15 @@ const HeroSection = () => {
               Hire Me
 
             </Link>
-              <a href={Cv} download="logojeubusta.png">
-              <button className="flex border-2 border-purpura rounded-full justify-center sm:justify-start items-center w-full sm:w-auto px-5 py-2  bg-transparent text-purpura font-semibold ml-5 dark:bg-degradado-black ">
-              
-              CV
-            </button>
-              </a>
-            
+            <a href={Cv} download="logojeubusta.png">
+              <button className="flex border-2 border-purpura rounded-full justify-center sm:justify-start items-center w-full sm:w-auto px-5 py-2 degradadolight text-purpura font-semibold ml-5 dark:bg-degradado-black">
+                <span id="button-text">CV</span>
+                
+                
+                
+              </button>
+            </a>
+
 
           </div>
         </motion.div>
@@ -67,56 +72,40 @@ const HeroSection = () => {
 
           <div className="relative ">
 
-            <div className="containeree">
-              <div className="boxhero "></div>
-              <Image src={BustaLogo} alt="Behance Icon" className="logo " />
-              <Image src={TextoBusta} alt="was" className="texto rotate-360" />
+            <div className="flex justify-center relative containeree">
+              <div className="absolute top-[45px] left-[45px] w-[360px] h-[360px] rounded-full bg-purpura boxhero "></div>
+              <Image src={BustaLogo} alt="Behance Icon" className="absolute p-[170px] " />
+              <Image src={TextoBusta} alt="was" className="absolute p-5 rotate-360" />
             </div>
-
-
+            
             <div
               onClick={() => {
                 window.open("https://github.com/BustaGraphic", "_blank");
               }}
-              onMouseEnter={() => setIsGithubHovered(true)}
-              onMouseLeave={() => setIsGithubHovered(false)}
-              className="absolute border-[1px] rounded-[10px] degradado top-[270px] left-[25px] dark:border-borde dark:bg-degradado-black "
+              
+              className="flex justify-center items-center degradado cursor-pointer  absolute border-[1px] rounded-[10px] w-[67px] h-[67px] text-4xl hover:text-purpura  top-[270px] left-[25px] dark:border-borde dark:bg-degradado-black "
             >
-              <Image
-                src={isGithubHovered ? GithubIconC : GithubIcon}
-                alt="Github Icon"
-                className="p-[13px] "
-              />
+               <FontAwesomeIcon icon={faGithub} className=''  />
             </div>
-
+              
             <div
               onClick={() => {
                 window.open("https://be.net/BustaGraphic", "_blank");
               }}
-              onMouseEnter={() => setIsBehanceHovered(true)}
-              onMouseLeave={() => setIsBehanceHovered(false)}
-              className="absolute border-[1px] rounded-[10px] degradado bottom-[15px] right-[160px] dark:border-borde dark:bg-degradado-black"
+              
+              className="flex justify-center items-center degradado cursor-pointer absolute border-[1px] rounded-[10px] w-[67px] h-[67px] text-4xl hover:text-purpura   bottom-[15px] right-[160px] dark:border-borde dark:bg-degradado-black"
             >
-              <Image
-                src={isBehanceHovered ? BehanceIconC : BehanceIcon}
-                alt="Behance Icon"
-                className="p-[13px] move-right"
-              />
+              <FontAwesomeIcon icon={faBehance} className=''  />
             </div>
 
             <div
               onClick={() => {
                 window.open("https://www.linkedin.com/in/josuebusta/", "_blank");
               }}
-              onMouseEnter={() => setIsLinkedInHovered(true)}
-              onMouseLeave={() => setIsLinkedInHovered(false)}
-              className="absolute  border-[1px] rounded-[10px] degradado bottom-[220px] right-[15px] dark:border-borde dark:bg-degradado-black"
+              
+              className="flex justify-center items-center cursor-pointer degradado absolute border-[1px] rounded-[10px] w-[67px] h-[67px] text-4xl text bottom-[220px] right-[15px] hover:text-purpura  dark:border-borde dark:bg-degradado-black"
             >
-              <Image
-                src={isLinkedInHovered ? LinkedInIconC : LinkedInIcon}
-                alt="LinkedIn Icon"
-                className="p-[15px] move-right"
-              />
+              <FontAwesomeIcon icon={faLinkedinIn} className=''  />
             </div>
           </div>
 

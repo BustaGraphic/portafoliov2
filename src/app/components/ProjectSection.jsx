@@ -13,13 +13,15 @@ import Node from "../../../public/node.png";
 import Python from "../../../public/python.png";
 import ReactIcon from "../../../public/react.png";
 import Image from 'next/image';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub, faCss3Alt, faHtml5, faReact, faAngular, faBootstrap, faJava, faJs, faPython, faNodeJs } from '@fortawesome/free-brands-svg-icons';
 
 
 const projectsData = [
   {
     id: 1,
     title: "React Portfolio Website",
-    aplications: [Html, Css, Js, ReactIcon],
+    aplications: ["Html", "Css", "Js", "React"],
     image: "/images/projects/1.png",
     tag: ["All", "Web"],
     gitUrl: "/",
@@ -28,7 +30,7 @@ const projectsData = [
   {
     id: 2,
     title: "Potography Portfolio Website",
-    aplications: [Node, Java, Python],
+    aplications: ["NodeJs", "Java", "Python"],
     image: "/images/projects/1.png",
     tag: ["All", "Brand"],
     gitUrl: "/",
@@ -37,7 +39,7 @@ const projectsData = [
   {
     id: 3,
     title: "E-commerce Application",
-    aplications: [Html, Css, Js, Angular, Bootstrap],
+    aplications: ["Html", "Css", "Js", "Angular", "Bootstrap"],
     image: "/images/projects/1.png",
     tag: ["All", "UiUx"],
     gitUrl: "/",
@@ -45,16 +47,17 @@ const projectsData = [
   },
 
 ];
-const appIcons = {
-  Html,
-  Js,
-  Css,
-  Angular,
-  Bootstrap,
-  Java,
-  Node,
-  Python,
-  ReactIcon,
+const fontAwesomeIcons = {
+  "Html": faHtml5,
+  "Css": faCss3Alt,
+  "Js": faJs,
+  "Java": faJava,
+  "Python": faPython,
+  "Angular": faAngular,
+  "React": faReact,
+  "Bootstrap": faBootstrap,
+  "NodeJs": faNodeJs,
+  
 };
 const tagMapping = {
   "All Works": "All",
@@ -126,7 +129,7 @@ const ProjectsSection = () => {
               imgUrl={project.image}
               gitUrl={project.gitUrl}
               previewUrl={project.previewUrl}
-              appIcons={appIcons}
+              fontAwesomeIcons={fontAwesomeIcons}
             />
           </motion.li>
         ))}

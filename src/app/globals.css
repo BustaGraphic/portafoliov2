@@ -25,39 +25,12 @@ body {
 }
 
 .boxhero {
-  top: 45px;
-  left: 45px;
-  width: 360px;
-  height: 360px;
-  border-radius: 100%;
-
   box-shadow: 9px 4px 15.7px #00000040;
   backdrop-filter: blur(10px) brightness(100%);
-  background-color: #4443D8;
-  position: absolute;
-}
-
-
-.logo,
-.texto {
-  position: absolute;
-
-}
-
-.logo {
-  padding: 170px;
-}
-
-.texto {
-  padding: 20px;
-
 }
 
 .containeree {
-  display: flex;
-  justify-content: center;
   align-items: center;
-  position: relative;
   height: 450px;
   width: 450px;
 }
@@ -78,14 +51,10 @@ body {
 
 .degradado {
   border: 1px solid #E3E3E3;
-  
-}
-.degradadomail {
-  border: 1px solid #4443D8;
-  
 }
 
-.degradado, .degradadomail{
+
+.degradado, .degradadomail, .degradaolight{
   background: linear-gradient(271deg, rgba(255, 255, 255, 0.18) 19.16%, rgba(187, 187, 187, 0.15) 78.89%);
   backdrop-filter: blur(10px);
 }
@@ -112,11 +81,11 @@ background: linear-gradient(271deg, rgba(131, 133, 136, 0.18) 19.16%, rgba(241, 
   border-top: 10px solid #4443D8; 
 }
 .svg-path {
-  fill: #f1f1f1 ; /* Color por defecto para el tema claro */
+  fill: #f1f1f173 ; 
 }
 
 .dark .svg-path {
-  fill: #353A40; /* Color para el tema oscuro */
+  fill: #353A40;
 }
 .svg-container:hover .svg-path {
   fill: #4443D8;
@@ -134,7 +103,7 @@ nav ul li a:hover {
 }
 
 .active-link:after {
-  bottom: -19px; 
+  bottom: -21px; 
 }
 
 
@@ -145,7 +114,6 @@ nav ul li a:hover {
 .active-link:after, .active-linke:after {
   content: '';
   position: absolute;
-
   left: 50%;
   transform: translateX(-50%);
   width: 50px;
@@ -182,4 +150,5 @@ nav ul li a:hover {
 .theme-toggle.dark-mode .toggle-btn {
   transform: translateX(25px); 
 }
+
 

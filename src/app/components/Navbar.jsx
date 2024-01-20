@@ -7,7 +7,9 @@ import MenuOverlay from "./MenuOverlay";
 import SunIcon from "../../../public/sun.svg";
 import MoonIcon from "../../../public/moon.svg";
 import Image from "next/image";
-
+import { Moon } from 'lucide-react';
+import { SunMedium } from 'lucide-react';
+import { Sun } from 'lucide-react';
 
 
 const navLinks = [
@@ -110,10 +112,8 @@ const Navbar = () => {
               <div className="flex items-center justify-center space-x-[5px] mr-[-20px] ">
 
                 <div className="flex items-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-[24px] w-[24px]" viewBox="0 0 24 24" fill="none">
-                    <path d="M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" stroke={`${theme === 'dark' ? '#BBC7D6' : '#4443D8'}`} stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" />
-                    <path d="M12 2V4 M12 20V22 M4.92999 4.92999L6.33999 6.33999 M17.66 17.66L19.07 19.07 M2 12H4 M20 12H22 M6.33999 17.66L4.92999 19.07 M19.07 4.92999L17.66 6.33999" stroke={`${theme === 'dark' ? '#BBC7D6' : '#4443D8'}`} stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" />
-                  </svg>
+               
+                <Sun className="h-[24px] w-[24px] text-purpura dark:text-blanko " stroke-width="2.3"/>
                 </div>
 
                 <div onClick={toggleTheme} className={`theme-toggle ${theme === 'dark' ? 'dark-mode' : ''}`}>
@@ -122,15 +122,16 @@ const Navbar = () => {
                   </div>
                 </div>
                 <div className="flex items-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke={`${theme === 'dark' ? '#4443D8' : '#353A40'}`} stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-moon"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" /></svg>
+                <Moon className="h-[24px] w-6 text-negro dark:text-purpura " stroke-width="2.2"/>
                 </div>
 
               </div>
 
-
+                <a href="#contact">
               <button className="text-lg  bg-purpura text-blanco rounded-full px-[40px] py-2  font-semibold dark:text-[#000000]">
                 Contact Me
               </button>
+              </a>
             </div>
           </div>
 
